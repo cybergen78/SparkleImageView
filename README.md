@@ -12,7 +12,7 @@ The sample application shows off every aspect of this library, so it's worth a l
 ## Examples
 
 ### `SparkleImageView` with `SparkleDrawable`
-The `mode` is set to `Mode.TOUCH_DISTANCE` and the dotScale is set to _2dp_.
+The `mode` is set to `Mode.TOUCH_DISTANCE` and the `dotScale` is set to _2dp_.
 Any other parameters are left at their default values.
 
 ![SparkleImageView with SparkleDrawable](./art/SparkleImageView_with_SparkleDrawable.gif)
@@ -27,6 +27,7 @@ The sparkleimageview package has the following dependencies:
 ```groovy
 implementation 'de.jarosz.sparkle:sparkleimageview:<latest-version>'
 ```
+The artifacts are available in JCenter and Maven Central FTW!
 
 ## Usage
 [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt),
@@ -56,7 +57,13 @@ Other supported XML attributes are:
 ##### `Mode`
 Three modes are supported:
 
-**// TODO: describe the modes with corresponding XML attributes and code variants**
+* `Mode.MOTION`: Device motion modulates the calculations.
+The related XML attribute is `device_motion`.
+* `Mode.TOUCH_DISTANCE`: Touches modulate the calculations using the distance between the start and current touch location.
+The related XML attribute is `touch_distance`.
+* `Mode.TOUCH_ANGLE`: Touches modulate the calculations using the angle of the circle around the start touch location.
+The related XML attribute is `touch_circle`.
+
 
 #### `FunctionButton`
 ```xml
@@ -94,7 +101,7 @@ val sparkleDrawable = SparkleDrawable(TriangleWave()).apply {
     color = Color.BLUE
 }
 ```
-> @see documentation of `SparkleDrawable` for a complete list of it's properties.
+> @see documentation of [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt) for a complete list of it's properties.
 
 ###### Performance
 All `Bitmap` lightness modulation is done in software.

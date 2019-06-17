@@ -15,18 +15,10 @@ The sample application shows off every aspect of this library, so it's worth a l
 The `mode` is set to `Mode.TOUCH_DISTANCE` and the dotScale is set to _2dp_.
 Any other parameters are left at their default values.
 
-<div>
-   <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
-       <source src="./art/SparkleImageView_with_SparkleDrawable.webm"  type="video/webm"/>
-   </video>
-</div>
+![SparkleImageView with SparkleDrawable](./art/SparkleImageView_with_SparkleDrawable.gif)
 
 ### `FunctionButton`
-<div>
-   <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
-       <source src="./art/FunctionButton.webm"  type="video/webm"/>
-   </video>
-</div>
+![FunctionButton](./art/FunctionButton.gif)
 
 ## Installation
 The sparkleimageview package has the following dependencies:

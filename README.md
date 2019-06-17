@@ -1,10 +1,11 @@
 # SparkleImageView
 SparkleImageView is an Android library which renders a highly customizable noise pattern with a given color.
-The [`SparkleImageView`](./src/main/java/sparkle/SparkleImageView.kt) uses the [`SparkleDrawable`](./src/main/java/sparkle/SparkleDrawable.kt)
+The [`SparkleImageView`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleImageView.kt)
+uses the [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt)
 and adds animation controls, e.g. responding to device motion or touches.
 
-The [`WaveFunction`](./src/main/java/sparkle/wave)s used to modulate the `Bitmap` pixels
-can be visualized easily with the [`FunctionButton`](./src/main/java/sparkle/FunctionButton.kt).
+The [`WaveFunction`](./sparkleimageview/src/main/java/de/jarosz/sparkle/wave)s used to modulate the `Bitmap` pixels
+can be visualized easily with the [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt).
 
 The sample application shows off every aspect of this library, so it's worth a look.
 
@@ -14,10 +15,18 @@ The sample application shows off every aspect of this library, so it's worth a l
 The `mode` is set to `Mode.TOUCH_DISTANCE` and the dotScale is set to _2dp_.
 Any other parameters are left at their default values.
 
-![SparkleImageView with SparkleDrawable](./art/SparkleImageView_with_SparkleDrawable.webm)
+<div>
+   <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
+       <source src="./art/SparkleImageView_with_SparkleDrawable.webm"  type="video/webm"/>
+   </video>
+</div>
 
 ### `FunctionButton`
-![FunctionButton](./art/FunctionButton.webm)
+<div>
+   <video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
+       <source src="./art/FunctionButton.webm"  type="video/webm"/>
+   </video>
+</div>
 
 ## Installation
 The sparkleimageview package has the following dependencies:
@@ -28,8 +37,11 @@ implementation 'de.jarosz.sparkle:sparkleimageview:<latest-version>'
 ```
 
 ## Usage
-SparkleDrawable, SparkleImageView and FunctionButton can be used in exchange for their superclasses.
-SparkleImageView and FunctionButton are also usable in XML as well as programmatically.
+[`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt),
+[`SparkleImageView`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleImageView.kt)
+and [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt) can be used in exchange for their superclasses.
+[`SparkleImageView`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleImageView.kt)
+and [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt) are also usable in XML as well as programmatically.
 
 ### XML
 
@@ -62,8 +74,9 @@ Other supported XML attributes are:
         app:waveType="triangle"
         app:zeroAxisEnabled="true"/>
 ```
-Use a `ToggleButton` style to customize the [`FunctionButton`](./src/main/java/sparkle/FunctionButton.kt) although it's a `RadioButton`, if you want a `Checkable` behavior.
-The padding is used to keep the graph in the [`FunctionButton`](./src/main/java/sparkle/FunctionButton.kt)s drawable bounds.
+Use a `ToggleButton` style to customize the [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt)
+although it's a `RadioButton`, if you want a `Checkable` behavior.
+The padding is used to keep the graph in the [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt)s drawable bounds.
 
 Other supported XML attributes are:
 
@@ -87,7 +100,7 @@ val sparkleDrawable = SparkleDrawable(TriangleWave()).apply {
 
 ###### Performance
 All `Bitmap` lightness modulation is done in software.
-Each pixels/dots lightness value is calculated separately according to the [`WaveFunction`](./src/main/java/sparkle/wave),
+Each pixels/dots lightness value is calculated separately according to the [`WaveFunction`](./sparkleimageview/src/main/java/de/jarosz/sparkle/wave),
 a random start value and other randomizing parameters.
 Therefore the dot scale is limited to at least _2_ and it's a good idea to set it to at least
 `resources.displayMetrics.density.roundToInt()` for acceptable performance.
@@ -107,13 +120,15 @@ val sparkleImageView = SparkleImageView(this).apply {
     }
 }
 ```
-The `dotScale` is set to `resources.displayMetrics.density.roundToInt()` by default, if you don't instantiate [`SparkleDrawable`](./src/main/java/sparkle/SparkleDrawable.kt) yourself.
-Furthermore, most of the "fine tuning parameters" are scoped to [`SparkleDrawable`](./src/main/java/sparkle/SparkleDrawable.kt).
+The `dotScale` is set to `resources.displayMetrics.density.roundToInt()` by default,
+if you don't instantiate [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt) yourself.
+Furthermore, most of the "fine tuning parameters" are scoped to [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt).
 
 #### WaveFunction
 An interface defining just to methods for converting an angle to a value and vice versa.
 
-For the use with [`SparkleDrawable`](./src/main/java/sparkle/SparkleDrawable.kt) and [`FunctionButton`](./src/main/java/sparkle/FunctionButton.kt)
-custom [`WaveFunction`](./src/main/java/sparkle/wave)s must return values between _-1_ and _1_ for any given angle.
+For the use with [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt)
+and [`FunctionButton`](./sparkleimageview/src/main/java/de/jarosz/sparkle/FunctionButton.kt)
+custom [`WaveFunction`](./sparkleimageview/src/main/java/de/jarosz/sparkle/wave/WaveFunction.kt)s must return values between _-1_ and _1_ for any given angle.
 
-For all [`WaveFunction`](./src/main/java/sparkle/wave)s `value(angle)` must be equal to `value(angle(value(angle)))`.
+For all [`WaveFunction`](./sparkleimageview/src/main/java/de/jarosz/sparkle/wave/WaveFunction.kt)s `value(angle)` must be equal to `value(angle(value(angle)))`.

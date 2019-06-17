@@ -53,6 +53,11 @@ Other supported XML attributes are:
 * `waveFunction: [sinusoid|triangle]`
 * `mode: [device_motion|touch_distance|touch_circle]`
 
+##### `Mode`
+Three modes are supported:
+
+**// TODO: describe the modes with corresponding XML attributes and code variants**
+
 #### `FunctionButton`
 ```xml
 <de.jarosz.sparkle.FunctionButton
@@ -89,6 +94,7 @@ val sparkleDrawable = SparkleDrawable(TriangleWave()).apply {
     color = Color.BLUE
 }
 ```
+> @see documentation of `SparkleDrawable` for a complete list of it's properties.
 
 ###### Performance
 All `Bitmap` lightness modulation is done in software.
@@ -116,7 +122,7 @@ The `dotScale` is set to `resources.displayMetrics.density.roundToInt()` by defa
 if you don't instantiate [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt) yourself.
 Furthermore, most of the "fine tuning parameters" are scoped to [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt).
 
-#### WaveFunction
+#### `WaveFunction`
 An interface defining just to methods for converting an angle to a value and vice versa.
 
 For the use with [`SparkleDrawable`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleDrawable.kt)

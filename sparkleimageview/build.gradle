@@ -2,6 +2,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 
+ext {
+    bintrayRepo = 'oss'
+    bintrayName = 'sparkleimageview'
+
+    publishedGroupId = 'de.jarosz.sparkle'
+    libraryName = 'SparkleImageView'
+    artifact = 'sparkleimageview'
+
+    libraryDescription = 'SparkleImageView is an Android library which renders a highly customizable noise pattern with a given color.'
+
+    siteUrl = 'https://github.com/cybergen78/SparkleImageView'
+    gitUrl = 'https://github.com/cybergen78/SparkleImageView.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'cybergen'
+    developerName = 'Peter Jarosz'
+    developerEmail = 'cybergen78@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 28
 
@@ -34,3 +58,6 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+apply from: 'maven_install.gradle'
+apply from: 'bintray_upload.gradle'

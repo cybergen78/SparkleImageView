@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SparkleImageView</string>
+    <string name="highlights">Highlights</string>
+    <string name="lightness">Lightness</string>
+    <string name="amount">Amount</string>
+    <string name="variability">Variability</string>
+    <string name="replacement_speed_factor">Replacement Speed Factor</string>
+    <string name="modulation">Modulation</string>
+    <string name="sensitivity">Sensitivity</string>
+    <string name="device_motion">Device Motion</string>
+    <string name="touch_distance">Touch Distance</string>
+    <string name="touch_angle">Touch Angle</string>
+    <string name="dot_scale">Dot Scale</string>
+    <string name="variance">Variance</string>
+    <string name="lightness_variance_up">Lightness Variance Up</string>
+    <string name="lightness_variance_down">Lightness Variance Down</string>
+    <string name="wave_speed_variance">Wave Speed Variance</string>
+    <string name="wave_type">Wave Type</string>
+    <string name="retro_mode">Retro Mode</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FunctionButton">
+        <attr name="waveType" format="flags">
+            <flag name="sinusoid" value="0"/>
+            <flag name="triangle" value="1"/>
+        </attr>
+        <attr name="wavePeriods" format="float"/>
+        <attr name="strokeWidth" format="dimension|reference"/>
+        <attr name="waveAmplitude" format="float|reference"/>
+        <attr name="waveOffsetY" format="float|reference"/>
+        <attr name="waveOffsetAngle" format="float|reference"/>
+        <attr name="zeroAxisEnabled" format="boolean"/>
+        <attr name="zeroAxisVerticalBias" format="float|reference"/>
+        <attr name="zeroAxisColor" format="color|reference"/>
+        <attr name="zeroAxisStrokeWidth" format="dimension|reference"/>
+    </declare-styleable>
+    <declare-styleable name="SparkleImageView">
+        <attr name="sensitivity" format="float|reference"/>
+        <attr name="waveFunction" format="flags">
+            <flag name="sinusoid" value="0"/>
+            <flag name="triangle" value="1"/>
+        </attr>
+        <attr name="mode" format="flags">
+            <flag name="device_motion" value="0"/>
+            <flag name="touch_distance" value="1"/>
+            <flag name="touch_circle" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

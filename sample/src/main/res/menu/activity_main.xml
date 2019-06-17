@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Reset" android:id="@+id/reset" android:icon="@drawable/ic_refresh_black_24dp"
+          app:showAsAction="ifRoom"/>
+    <item android:title="Pick color" app:showAsAction="ifRoom" android:id="@+id/color"
+          android:icon="@drawable/ic_color_lens_black_24dp" android:checkable="true"/>
+    <item android:title="Tune" android:id="@+id/settings" android:icon="@drawable/ic_tune_black_24dp"
+          app:showAsAction="ifRoom" android:checkable="true"/>
+</menu>

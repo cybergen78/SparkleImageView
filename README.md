@@ -1,3 +1,7 @@
+[![GitHub license](https://img.shields.io/github/license/cybergen78/SparkleImageView.svg)](https://github.com/cybergen78/SparkleImageView/blob/master/LICENSE.txt)
+[![GitHub release](https://img.shields.io/github/release/cybergen78/SparkleImageView.svg)](https://github.com/cybergen78/SparkleImageView/releases)
+[![GitHub issues](https://img.shields.io/github/issues/cybergen78/SparkleImageView.svg)](https://github.com/cybergen78/SparkleImageView/issues)
+
 # SparkleImageView
 SparkleImageView is an Android library which renders a highly customizable noise pattern with a given color.
 The [`SparkleImageView`](./sparkleimageview/src/main/java/de/jarosz/sparkle/SparkleImageView.kt)
